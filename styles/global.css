@@ -31,6 +31,7 @@ html, button {
 }
 
 html {
+  zoom: .5;
   background-color: #ccc3cc;
 }
 
