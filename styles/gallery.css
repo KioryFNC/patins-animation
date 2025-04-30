@@ -7,9 +7,9 @@ section.gallery {
   & header {
     text-align: center;
   }
-    
+
   & header span {
-    font: 500 var(--text-sm)/1.5 var(--ff-base);
+    font: 500 var(--text-sm) / 1.5 var(--ff-base);
   }
 
   & img {
@@ -21,9 +21,9 @@ section.gallery {
     display: grid;
     margin-top: 2rem;
     gap: 2.5rem;
-    grid-template-areas: 
-    "A B B"
-    "C C D";
+    grid-template-areas:
+      "A B B"
+      "C C D";
   }
 
   & figure {
@@ -58,15 +58,15 @@ section.gallery {
     &:nth-child(1) {
       grid-area: A;
     }
-    
+
     &:nth-child(2) {
       grid-area: B;
     }
-    
+
     &:nth-child(3) {
       grid-area: C;
     }
-    
+
     &:nth-child(4) {
       grid-area: D;
     }
@@ -76,8 +76,8 @@ section.gallery {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: .5rem;
-    font: 500 var(--text-sm)/1.5 var(--ff-base);
+    gap: 0.5rem;
+    font: 500 var(--text-sm) / 1.5 var(--ff-base);
     color: white;
     position: absolute;
     bottom: 0;
@@ -85,11 +85,7 @@ section.gallery {
     padding: 1.5rem 2rem;
     transform: translateY(100%);
     transition: transform 500ms;
-    background: linear-gradient(
-      to top, 
-      rgb( 0 0 0  / 0.64), 
-      rgb( 0 0 0 / 0)
-    );
+    background: linear-gradient(to top, rgb(0 0 0 / 0.64), rgb(0 0 0 / 0));
 
     & > img {
       width: 2rem;
@@ -104,5 +100,15 @@ section.gallery {
   from {
     opacity: 0;
     transform: translateY(100%);
+  }
+}
+
+@media (max-width: 768px) {
+  section.gallery .content {
+    grid-template-areas:
+      "A"
+      "B"
+      "C"
+      "D";
   }
 }
